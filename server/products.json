@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "permalink": "ktx-hunter-pro",
+      "product_name_contains": "프로",
+      "tier": "PRO",
+      "days": 30
+    },
+    {
+      "permalink": "ktx-hunter-pro-season",
+      "product_name_contains": "시즌",
+      "tier": "PRO",
+      "days": 90
+    },
+    {
+      "permalink": "ktx-hunter-std",
+      "product_name_contains": "스탠다드",
+      "tier": "STD",
+      "days": 30
+    }
+  ],
+  "default": {
+    "tier": "PRO",
+    "days": 30
+  }
+}
