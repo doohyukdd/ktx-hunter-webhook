@@ -138,12 +138,10 @@ async def webhook_gumroad(
     if expected_seller and seller_id != expected_seller:
         raise HTTPException(status_code=403, detail="Invalid seller_id")
 
-    if test.lower() == "true":
-        return {"status": "test_ok"}
-
     if not email or not sale_id:
         raise HTTPException(status_code=400, detail="Missing email or sale_id")
 
+    # Gumroad "Send test ping" (no sale) — skip only when sale_id is empty
     order_id = f"GM-{sale_id}"
     return _process_sale(
         order_id=order_id,
